@@ -1,0 +1,81 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/sober-driver.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            .container
+                                nav.breadcrumbs
+                                    a(href='#').breadcrumbs__item Главная
+                                    span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box
+                                h1.page-title  Услуга <br/> Трезвый водитель
+
+
+                .section.section_bg_gradient-light.section_padding_100
+                    .section__section
+                        .container.container_width_1500
+                            .preview-image-text
+                                img(src='./images/previews/sober-driver/preview1.jpg').preview-image-text__image
+                                .preview-image-text__text
+                                    .description-box.description-box_height_450
+                                        .description-box__icon.description-box__icon_pos_top
+                                            .lines-icon
+                                                i.lines-icon__line
+                                                i.lines-icon__line.lines-icon__line_bg_dark
+                                                i.lines-icon__line
+                                        .description-box__icon.description-box__icon_pos_bottom
+                                            .lines-icon
+                                                i.lines-icon__line
+                                                i.lines-icon__line.lines-icon__line_bg_dark
+                                                i.lines-icon__line
+                                        .description-box__inner
+                                            .st-text-box
+                                                h2 Услуга ”Трезвый водитель” <br/> в Воронеже
+                                                p Как показывает статистика, самая частая причина ДТП - вождение в нетрезвом виде.Такое поведение недопустимо, ведь пьяный водитель не в состоянии оценивать дорожную ситуацию, и поэтому велик риск попасть в аварию. Кроме того, за вождение в нетрезвом виде полагается лишение прав.
+                    .section__section
+                        .container.container_width_800
+                            .st-text-box
+                                h2 Услуга ”Трезвый водитель”
+                                p Такси Воронеж "TAXICAMRY" предлагает услугу "Трезвый водитель" специально для тех,кто из-за вечерних посиделок в барах не может себе позволить сесть за руль. Мы отвечаем за сохранность вашего автомобиля! Круглосуточное обслуживание, высококлассные специалисты и приемлимые цены - все это вы найдете в компании такси "TAXICAMRY".
+                                p Услуга "Трезвый водитель" позволяет вам быстро и недорого доехать в любую точку города. Доверяя свою машину нашим водителям, вы можете рассчитывать на профессионализм и ответственность сотрудников "TAXICAMRY".
+
+
+                .full-images-grid
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/sober-driver/preview2.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title гарантии
+                                .proportion-box__descr Мы отвечаем за сохранность <br/> вашего автомобиля!
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/sober-driver/preview3.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title в любое время
+                                .proportion-box__descr Круглосуточное обслуживание, <br/> высококлассные специалисты
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/sober-driver/preview4.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title приемлимые цены
+                                .proportion-box__descr Профессионализм и ответственность <br/> сотрудников "TAXICAMRY".
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

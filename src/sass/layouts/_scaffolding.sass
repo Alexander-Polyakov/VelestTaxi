@@ -1,0 +1,1536 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+.tac
+    text-align: center
+
+.icon
+    display: inline-block
+    vertical-align: middle
+
+h1, h2, h3, h4, h5, h6
+    font-weight: normal
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='email'],
+[type='number']
+    appearance: none
+
++font-face('ffbold', '../fonts/OfficinaSerifC-Bold')
++font-face('ffbook', '../fonts/OfficinaSerifC-Book')
+
+@import url('https://fonts.googleapis.com/css?family=Arsenal&subset=cyrillic')
+
+
+$ff-arsenal: "Arsenal"
+$ff-book: 'ffbook'
+$ff-bold: 'ffbold'
+$dark: #1c1d22
+$dark-gray: #4c4c4c
+$light-gray: #a9b7c0
+$green: #7ad900
+$dark-green: #57b800
+$red: #dd0000
+$red2: #d2250e
+$gray: #5c5c5c
+
+
+body
+    font-size: 18px
+    line-height: 1.2em
+    position: relative
+    font-family: $ff-arsenal
+    font-weight: 400
+    color: #535353
+    &.ovh
+        overflow: hidden
+
+.container
+    max-width: 1200px
+    padding: 0 15px
+    margin: 0 auto
+    &_width_1750
+        max-width: 1750px
+    &_width_1500
+        max-width: 1530px
+    &_width_1240
+        max-width: 1270px
+    &_width_900
+        max-width: 930px
+    &_width_800
+        max-width: 830px
+    &_width_700
+        max-width: 730px
+    &_width_600
+        max-width: 630px
+
+.st-text-box
+    line-height: 1.2em
+    font-size: 20px
+    color: #383838
+    h2
+        font-size: 42px
+        line-height: 1em
+        margin-bottom: 15px
+        text-transform: uppercase
+    h3
+        font-size: 30px
+        line-height: 1em
+        margin-bottom: 15px
+        text-transform: uppercase
+    p
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+
+    ul
+        list-style: none
+        text-indent: 15px
+        li
+            position: relative
+            &:before
+                content: ''
+                width: 5px
+                height: 5px
+                position: absolute
+                top: 11px
+                left: 0
+                background-color: $red
+                border-radius: 50%
+    strong
+        color: $red
+
+.page
+    width: 100%
+    overflow: hidden
+    position: relative
+    min-width: 320px
+    &__overlay
+        left: 0
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        display: none
+        z-index: 1000
+        background-color: $dark-gray
+        opacity: 0.8
+    &__popups
+        left: 0
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        display: none
+        pointer-events: none
+        z-index: 1500
+    &__menu
+        position: absolute
+        left: -100%
+        top: 0
+        height: 100%
+        width: 100%
+        background-color: #1c1d22
+        padding: 30px 0 0
+        z-index: 500
+        transition: all 0.5s ease 0s
+        &.opened
+            left: 0
+
+
+
+.mobile-menu
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+        z-index: 20
+    &__nav
+        margin-bottom: 20px
+    &__phones
+        text-align: center
+        font-size: 22px
+        color: #d0d1d4
+    &__phone
+        margin-bottom: 15px
+
+.page-footer
+    &__last-line
+        padding: 15px 0
+        background-color: #17171b
+        font-size: 16px
+        color: #8d8d8d
+
+
+.all-info-grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 -10px
+    &__item
+        padding: 0 10px
+    &__link
+        color: inherit
+        text-decoration: none
+        &:hover
+            color: #eaeaea
+            text-decoration: underline
+
+
+.page-header
+    border-bottom: 1px solid #b8b8b8
+    position: relative
+    z-index: 150
+    &__hamburger
+        display: none
+    &__phone
+        font-size: 22px
+        color: #d0d1d4
+    &__top-section
+        background: linear-gradient( 180deg, #4a4b52 0%, #1c1d22 100%)
+        padding: 20px 0
+    &__bottom-section
+        background-color: #141418
+    &__logo
+        width: 310px
+    &__top-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__bottom-container
+        position: relative
+        padding-right: 200px
+    &__nav-more-button
+        position: absolute
+        right: 0
+        bottom: -4px
+
+.main-nav
+    display: flex
+    align-items: center
+    list-style: none
+    margin: 0 -12px
+
+.main-nav-item
+    position: relative
+    &.opened
+        .main-nav-item__toggle
+            &:after
+                display: none
+    &__toggle
+        position: absolute
+        height: 30px
+        width: 30px
+        border: 2px solid $red
+        right: 10px
+        top: 8px
+        outline: none
+        background-color: inherit
+        cursor: pointer
+        &:before
+            content: ''
+            width: 60%
+            position: absolute
+            left: 20%
+            height: 2px
+            top: 50%
+            margin-top: -1px
+            background-color: $red
+        &:after
+            content: ''
+            height: 60%
+            position: absolute
+            top: 20%
+            width: 2px
+            left: 50%
+            margin-left: -1px
+            background-color: $red
+    &__link
+        color: #cbcaca
+        font-size: 20px
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        text-decoration: none
+        padding: 12px
+        transition: all 0.5s ease 0s
+    &__link-arrow
+        width: 10px
+        height: 10px
+        border-right: 2px solid $red2
+        border-bottom: 2px solid $red2
+        transform: rotate(45deg)
+        margin-left: 8px
+        transition: all 0.5s ease 0s
+    &__dropmenu
+        pointer-events: none
+        opacity: 0
+        transition: all 0.5s ease 0s
+        background-color: #1a1c21
+        border: 1px solid $red2
+        padding: 20px
+        position: absolute
+        top: 100%
+        left: 0
+    &:hover
+        .main-nav-item__link
+            background-color: $red2
+        .main-nav-item__link-arrow
+            border-right: 2px solid #cbcaca
+            border-bottom: 2px solid #cbcaca
+        .main-nav-item__dropmenu
+            opacity: 1
+            pointer-events: auto
+
+
+.dropmenu-box
+    &__title
+        color: $red2
+        font-size: 34px
+        line-height: 1.2em
+        margin-bottom: 15px
+
+.dropmenu-list
+    column-count: 3
+    column-gap: 75px
+    font-size: 17px
+    line-height: 1.2em
+    list-style: none
+    &__item
+        min-width: 170px
+        padding: 5px 0
+    &__link
+        color: #d6d6d6
+        transition: all 0.5s ease 0s
+        text-decoration: none
+        &:hover
+            color: $red2
+
+.header-logo
+    display: block
+    &__img
+        width: 100%
+
+.infographic-grid
+    display: flex
+    justify-content: space-between
+    &__item
+        flex-basis: 25%
+        flex-shrink: 1
+        padding: 0 10px
+
+.infographic-grid-item
+    text-align: center
+    &__icon-box
+        height: 80px
+        margin-bottom: 15px
+    &__icon
+        height: 100%
+    &__content
+        font-size: 22px
+        line-height: 1.2em
+        color: #c7c7c7
+        text-transform: uppercase
+
+
+.title
+    text-align: center
+    &_footer
+        .title__text
+            color: #e2e2e2
+            line-height: 1em
+            text-transform: uppercase
+            text-shadow: 3px 3px 1px rgba(11, 11, 11, 0.4)
+            background: linear-gradient(#fff 0%, #ccc 50%, #fff 100% )
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            font-size: 50px
+            margin-bottom: 5px
+    &_mb_20
+        margin-bottom: 20px
+    &__descr
+        font-size: 20px
+        color: #c8c8c8
+        margin-bottom: 20px
+    &__icon
+        display: inline-block
+        vertical-align: middle
+        width: 45px
+        height: 26px
+        margin-bottom: 5px
+        overflow: hidden
+    &__text
+        font-size: 45px
+        color: #5a5a5a
+        text-transform: uppercase
+        line-height: 1em
+        &_fz_40
+            font-size: 40px
+        &_color_white
+            color: #fff
+        &_shadow_black
+            text-shadow: 2.364px 1.847px 2px rgba(0, 0, 0, 0.75)
+        &_fz_50
+            font-size: 50px
+        &_mb_5
+            margin-bottom: 5px
+        &_bg_gradient
+            background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
+.grid
+    display: flex
+    flex-wrap: wrap
+    margin: -24px -12px
+    &__item
+        width: 25%
+        padding: 24px 12px
+
+.section
+    padding: 50px 0
+    &__description-box
+        width: 620px
+    &__full-h-container
+        display: flex
+        align-items: flex-end
+        height: 100%
+        &_content-right
+            justify-content: flex-end
+    &_preview
+        min-height: 650px
+        -webkit-background-size: cover
+        background-size: cover
+    &_min-h_800
+        min-height: 800px
+    &_h_700
+        height: 700px
+    &__contacts-grid
+        margin-top: -100px
+    &__section
+        margin-bottom: 70px
+        &:last-child
+            margin-bottom: 0
+    &__title
+        margin-bottom: 40px
+    &_line_bottom
+        border-bottom: 1px solid #616165
+    &_bg_dark
+        background-color: $dark
+    &_bg_gradient-dark
+        background: linear-gradient( 180deg, #4a4b52 0%, #1c1d22 100%)
+        .title__text
+            color: #aaaaaa 
+    &_bg_gradient-light
+        background: linear-gradient( -25deg, rgb(156,158,162) 0%, rgb(225,225,225) 50%, rgb(156,158,162) 100%)
+    &_padding_100
+        padding: 100px 0
+    &_padding_140
+        padding: 140px 0
+    &_padding_25-0-50
+        padding: 25px 0 50px
+    &_padding_70-0-0
+        padding: 70px 0 0
+
+.st-box
+    padding: 10px
+    border: 1px solid #fff
+    background-image: linear-gradient( -35deg, #a2a3a7 0%, #e1e1e1 25%, #9c9ea2 50%, #e1e1e1 75%, #a2a3a7 100%)
+    box-shadow: 1.618px 1.176px 6px 0 rgba(45, 48, 52, 0.56)
+    position: relative
+    height: 100%
+    &:before
+        content: ''
+        width: 58px
+        height: 2px
+        background-color: $red
+        position: absolute
+        left: 50%
+        margin-left: -29px
+        top: 0
+    &__content
+        height: 100%
+        background-image: linear-gradient( -35deg, #cecfd1 0%, #eee 50%, #cecfd1 100%)
+        border: 1px solid #fff
+        padding: 10px
+
+.full-images-grid
+    display: flex
+    margin: 0 -1px
+    &__item
+        flex-basis: 33.3%
+        padding: 0 1px
+
+.advantages-box
+    position: relative
+    overflow: hidden
+    padding-bottom: 80%
+    &__image
+        width: 100%
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        object-fit: cover
+    &__content
+        position: absolute
+        left: 0
+        width: 100%
+        text-align: center
+        bottom: 0
+        padding: 20px
+        color: #fff
+        z-index: 20
+    &__title
+        font-size: 40px
+        line-height: 0.8em
+        margin-bottom: 10px
+        text-transform: uppercase
+        text-shadow: 2px 2px 3px #333
+    &__descr
+        font-size: 20px
+
+
+.preview-image-text
+    position: relative
+    height: 650px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    overflow: hidden
+    &__image
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+    &__text
+        position: relative
+        z-index: 20
+        width: 700px
+
+.description-box
+    border: 1px solid #fff
+    padding: 40px
+    overflow: hidden
+    position: relative
+    background-image: linear-gradient( -45deg, #b0b1b4 0%, #dedfdf 25%, #b4b5b8 40%, #a0a2a5 50%, #b4b5b8 60%, #dedfdf 75%, #b0b1b4 100% )
+    box-shadow: 5px 5px 10px 0 #777
+    color: $dark-gray
+    &_padding_25
+        padding: 25px
+    &_padding_15
+        padding: 15px
+    &_contacts
+        padding: 25px
+        height: 250px
+        .description-box__inner
+            padding: 15px 15px 20px
+            &:before
+                content: ''
+                position: absolute
+                width: 146px
+                height: 2px
+                background-color: $red
+                left: 50%
+                margin-left: -78px
+                top: 0
+                z-index: 20
+    &_height_450
+        height: 450px
+    &_height_170
+        height: 170px
+    &__inner
+        background-image: linear-gradient( -30deg, #9c9ea2 0%, #e1e1e1 50%, #9c9ea2 100% )
+        color: #555
+        padding: 25px
+        border: 1px solid #fff
+        height: 100%
+        position: relative
+        z-index: 100
+        &_p_0
+            padding: 0
+        &_price
+            &:before
+                content: ''
+                width: 72px
+                height: 2px
+                background-color: $red
+                position: absolute
+                top: 0
+                left: 50%
+                margin-left: -36px
+    &__title
+        font-size: 42px
+        line-height: 1em
+        margin-bottom: 15px
+        text-transform: uppercase
+        &_fz_35
+            font-size: 35px
+    &__content
+        font-size: 18px
+        line-height: 1.2em
+    &__icon
+        position: absolute
+        z-index: 50
+        transform: rotate(60deg)
+        &_pos_top
+            left: 0
+            top: 20px
+        &_pos_bottom
+            right: 0
+            bottom: 0
+        &_pos_middle
+            width: 40px
+            height: 26px
+            overflow: hidden
+            left: 50%
+            margin-left: -20px
+            top: 0
+            transform: none
+    &__table
+        position: relative
+        z-index: 100
+        font-size: 24px
+        text-transform: uppercase
+    &__price-grid
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 24px
+    &__price-item
+        width: 48%
+        flex-shrink: 0
+        text-align: center
+        height: 185px
+    &__price-title
+        font-size: 24px
+        margin-bottom: 30px
+        color: $dark
+    &__price-value
+        font-size: 55px
+        line-height: 1em
+        color: $dark
+    &__price-button
+        position: absolute
+        left: 0
+        bottom: -10px
+        width: 100%
+    &__distance
+        font-size: 30px
+        text-align: center
+        text-transform: uppercase
+
+.lines-icon
+    width: 150px
+    &_w_100
+        width: 100%
+    &_rotate_60
+        transform: rotate(60deg)
+    &_rotate_120
+        transform: rotate(120deg)
+    &__line
+        height: 3px
+        width: 100%
+        display: block
+        margin: 4px 0
+        background-color: $red
+        &_bg_dark
+            background-color: $dark
+        &_bg_gray
+            background-color: #a4a4a4
+
+.route-box
+    text-align: center
+    &__header
+        font-size: 16px
+        color: #323232
+        margin-bottom: 20px
+    &__title
+        font-size: 30px
+        line-height: 1em
+        color: #626262
+        margin-bottom: 15px
+        text-transform: uppercase
+    &__subtitle
+        font-size: 32px
+        line-height: 1em
+        color: $red
+        margin-bottom: 20px
+    &__footer
+        font-size: 18px
+        color: #626262
+
+
+.preview-section
+    height: 640px
+    padding: 10px 0
+    background-size: cover
+    position: relative
+    &__container
+        position: relative
+        height: 100%
+    &__breadcrumbs
+        color: #d6d6d6
+    &__header
+        position: absolute
+        left: 50%
+        transform: translateX(-40%)
+        top: 40px
+    &__distance
+        position: absolute
+        bottom: 270px
+        right: 150px
+        color: #c0c0c0
+    &__prices
+        position: absolute
+        display: flex
+        bottom: 55px
+        right: 30px
+    &__price-item
+        width: 370px
+        margin: 0 15px
+
+.page-title
+    font-size: 65px
+    color: #e2e2e2
+    line-height: 0.8em
+    text-transform: uppercase
+    text-shadow: 3px 3px 1px rgba(11, 11, 11, 0.4)
+    background: linear-gradient(#fff 0%, #ccc 50%, #fff 100% )
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.main-title-box
+    &__title
+        margin-bottom: 10px
+    &__descr
+        font-size: 20px
+        color: #d9d9d9
+        line-height: 1.2em
+        width: 450px
+        margin-left: 200px
+        position: relative
+        &:before
+            content: ''
+            width: 30px
+            background-image: url('../images/icons/text-line.png')
+            -webkit-background-size: 100% 100%
+            background-size: 100% 100%
+            position: absolute
+            left: -35px
+            top: -10px
+            bottom: -10px
+
+.breadcrumbs
+    &__item
+        color: inherit
+        font-size: 16px
+        margin-right: 28px
+        text-decoration: none
+        position: relative
+        &:after
+            content: '/'
+            position: absolute
+            right: -16px
+            top: -2px
+            color: #d6d6d6
+        &:last-child
+            margin-right: 0
+            &:after
+                display: none
+    a:hover
+        text-decoration: underline
+
+
+.services-grid
+    display: flex
+    justify-content: space-between
+    margin: 0 -10px
+    &__item
+        padding: 0 10px
+
+
+.services-item
+    color: #ababab
+    text-align: center
+    &__icon
+        height: 100px
+        margin-bottom: 10px
+    &__text
+        font-size: 22px
+        text-transform: uppercase
+
+
+.contacts-page-main
+    &__section
+        margin-bottom: 45px
+        &:last-child
+            margin-bottom: 0
+
+.contacts-box
+    &__header
+        margin-bottom: 25px
+    &__content
+        margin-bottom: 25px
+    &__title
+        color: $dark-gray
+        font-size: 35px
+        line-height: 1em
+        margin-bottom: 10px
+        text-transform: uppercase
+        text-align: center
+    &__footer
+        font-size: 22px
+        color: $dark-gray
+        text-align: center
+    &__subtitle
+        font-size: 23px
+        color: $dark-gray
+        text-align: center
+    &__phones
+        display: flex
+        justify-content: space-around
+        color: $red
+        font-size: 30px
+        line-height: 1em
+    &__address
+        display: flex
+        justify-content: space-between
+        font-size: 22px
+        text-transform: uppercase
+        line-height: 1.2em
+        color: $gray
+    &__address-item
+        display: flex
+        align-items: center
+        width: 48%
+    &__address-icon
+        height: 80px
+        width: 80px
+        margin-right: 25px
+    &__requisites
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__requisites-text
+        width: 240px
+        flex-shrink: 0
+        font-size: 24px
+        text-transform: uppercase
+        color: $dark-gray
+        line-height: 1.2em
+
+.contact-item
+    color: inherit
+    pointer-events: none
+    text-decoration: none
+    &__icon
+        width: 22px
+        height: 22px
+        margin-right: 5px
+        display: inline-block
+        vertical-align: middle
+    &_fz_20
+        font-size: 20px
+    &_color_gray
+        color: #989898
+
+.slanting-button
+    min-width: 170px
+    position: relative
+    padding: 10px 30px 15px
+    color: #fff
+    outline: none
+    border: none
+    text-decoration: none
+    display: inline-block
+    background-color: inherit
+    cursor: pointer
+    &:active
+        left: -2px
+        top: 2px
+    &__text
+        font-size: 20px
+        text-transform: uppercase
+        position: relative
+        z-index: 50
+        text-align: center
+    &__bg
+        background-image: url('../images/icons/button.svg')
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 20
+        opacity: 1
+        -webkit-background-size: 100% 100%
+        background-size: 100% 100%
+    &__bg-hover
+        background-image: url('../images/icons/button-hover.svg')
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 20
+        opacity: 0
+        -webkit-background-size: 100% 100%
+        background-size: 100% 100%
+    &:hover
+        .slanting-button__bg
+            opacity: 0
+        .slanting-button__bg-hover
+            opacity: 1
+            
+.table
+    &__tr
+        display: flex
+        padding: 30px 25px
+        justify-content: space-between
+        align-items: center
+        background-color: #c5c6c8
+        border: 1px solid #fff
+        box-shadow: 5px 5px 5px 0 #777
+        margin-bottom: 7px
+        &:last-child
+            margin-bottom: 0
+    &__td:last-child
+        width: 195px
+        flex-shrink: 0
+        text-align: left
+
+.contacts-footer-grid
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #d4d4d4
+    font-size: 24px
+
+.distance
+    display: inline-block
+    position: relative
+    padding-top: 52px
+    font-style: italic
+    &__section
+        display: inline-block
+        vertical-align: top
+    &__icon
+        position: absolute
+        right: 120px
+        top: 0
+        width: 82px
+        height: 44px
+    &__fz50
+        font-size: 50px
+        line-height: 1em
+    &__fz40
+        font-size: 40px
+        line-height: 1em
+    &__fz25
+        font-size: 25px
+        line-height: 1em
+
+
+.price-box
+    display: flex
+    align-items: center
+    text-align: center
+    justify-content: center
+    color: $dark
+    &__title
+        font-size: 24px
+        line-height: 1em
+        text-transform: uppercase
+        margin-bottom: 10px
+    &__value
+        font-size: 65px
+        line-height: 0.8em
+        color: $red
+    &__fz35
+        font-size: 35px
+
+
+.image-proportional-box
+    position: relative
+    padding-top: 70%
+    display: block
+    overflow: hidden
+    transition: all 0.5s ease 0s
+    &_gallery
+        cursor: pointer
+        &:hover
+            .image-proportional-box__image
+                width: 110%
+                height: 110%
+                left: -5%
+                top: -5%
+    &__image
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 10
+        transition: all 0.5s ease 0s
+
+
+.gallery-grid
+    display: flex
+    flex-wrap: wrap
+    margin: -50px -20px 0
+    &__item
+        padding: 50px 20px 0
+        width: 50%
+
+
+.popups
+    &__popups-wrapper
+        display: flex
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        align-items: center
+        justify-content: center
+        padding: 0 10px
+    &__popup
+        width: 760px
+        display: none
+        pointer-events: auto
+        background-color: #1a1c21
+        padding: 15px 30px 30px
+        border: 2px solid $red
+
+.popup
+    position: relative
+    &__title
+        margin-bottom: 30px
+    &__logo
+        width: 250px
+        height: 86px
+        margin: 0 auto 30px
+    &__logo-img
+        width: 100%
+        height: 100%
+    &__close
+        position: absolute
+        right: 10px
+        top: 10px
+
+
+.close
+    width: 34px
+    height: 34px
+    transform: rotate(45deg)
+    cursor: pointer
+    border: 2px solid $gray
+    border-radius: 50%
+    background: inherit
+    outline: none
+    &:before
+        content: ''
+        width: 60%
+        height: 2px
+        background-color: $gray
+        position: absolute
+        left: 20%
+        top: 50%
+        margin-top: -1px
+    &:after
+        content: ''
+        width: 2px
+        height: 60%
+        background-color: $gray
+        position: absolute
+        top: 20%
+        left: 50%
+        margin-left: -1px
+    &:hover
+        border-color: $red
+        &:before, &:after
+            background-color: $red
+
+
+.st-input
+    height: 38px
+    width: 100%
+    outline: none
+    font-family: $ff-arsenal
+    background-color: #aaacb9
+    font-size: 18px
+    color: #323a42
+    padding: 0 13px
+    +phc(#323a42)
+    border: 3px solid #aaacb9
+    transition: all 0.5s ease 0s
+    &.error
+        border-color: $red
+        border-radius: 5px
+
+.st-textarea
+    height: 208px
+    width: 100%
+    outline: none
+    background-color: #aaacb9
+    font-family: $ff-arsenal
+    font-size: 18px
+    color: #323a42
+    padding: 0 13px
+    +phc(#323a42)
+    border: 3px solid #aaacb9
+    transition: all 0.5s ease 0s
+    &.error
+        border-color: $red
+        border-radius: 5px
+
+.color-red
+    color: $red
+    
+.form
+    color: #a8aab5
+    &__grid
+        display: flex
+        justify-content: space-between
+        margin-bottom: 15px
+    &__grid-section
+        width: 47%
+        flex-shrink: 0
+    &__line
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+    &__info
+        color: #a2abb4
+        font-size: 14px
+        line-height: 1.2em
+        margin-bottom: 30px
+    &__info-link
+        color: inherit
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    &__footer
+        text-align: center
+
+.input-box
+    &__title
+        font-size: 20px
+        text-transform: uppercase
+        margin-bottom: 10px
+
+.hamburger
+    width: 30px
+    height: 28px
+    position: relative
+    display: inline-block
+    background-color: inherit
+    outline: none
+    cursor: pointer
+    border: 2px solid $red
+    &__line
+        height: 2px
+        width: 80%
+        position: absolute
+        left: 10%
+        top: 50%
+        margin-top: -1px
+        background-color: $red
+        &_top
+            margin-top: 0
+            top: 5px
+        &_bottom
+            margin-top: 0
+            top: auto
+            bottom: 5px
+
+
+
+@media screen and (max-width: 1100px)
+    .main-nav-item__link
+        font-size: 18px
+
+@media screen and (max-width: 1024px)
+    .contact-item
+        pointer-events: auto
+
+    .main-nav-item__link-arrow
+        display: none
+
+    .main-nav-item__link
+        font-size: 20px
+
+    .main-nav
+        display: block
+        margin: 0
+
+    .main-nav__item
+        border-bottom: 2px solid $gray
+
+    .main-nav-item__dropmenu
+        display: none
+        position: relative
+        opacity: 1
+        transition: none
+        background-color: #2a2b31
+        border: none
+        padding: 0
+
+    .dropmenu-box__title
+        display: none
+
+    .dropmenu-box__content
+        height: 300px
+        overflow-y: scroll
+
+    .dropmenu-list
+        column-count: 1
+        column-gap: 0
+
+    .dropmenu-list__item
+        padding: 0
+        width: 100%
+        max-width: 100%
+
+    .dropmenu-list__link
+        display: block
+        padding: 10px 15px
+
+    .main-nav-item:hover .main-nav-item__link
+        background-color: inherit
+        
+    .contacts-box__phones
+        font-size: 24px
+
+    .page-header__bottom-container
+        display: none
+
+    .page-header__bottom-section
+        padding: 10px 0
+
+    .page-header__hamburger
+        display: block
+        text-align: right
+
+    .preview-section__header
+        position: static
+        transform: none
+
+    .preview-section__breadcrumbs
+        margin-bottom: 20px
+
+    .main-title-box__descr
+        margin-left: 40px
+        font-size: 18px
+
+    .main-title-box__title
+        margin-bottom: 20px
+
+    .page-title
+        font-size: 45px
+        line-height: 1em
+
+    .preview-section
+        min-height: 500px
+        height: auto
+
+    .preview-section__header
+        margin-bottom: 20px
+
+    .preview-section__prices
+        position: static
+
+    .infographic-grid-item__content
+        font-size: 18px
+
+    .infographic-grid-item__icon-box
+        height: 70px
+        margin-bottom: 5px
+
+    .section
+        padding: 30px 0
+
+    .section__title
+        margin-bottom: 20px
+
+    .title__text
+        font-size: 35px
+
+    .route-box__title
+        font-size: 24px
+
+    .advantages-box__descr
+        font-size: 16px
+        br
+            display: none
+
+    .advantages-box__title
+        font-size: 28px
+        br
+            display: none
+
+    .preview-image-text
+        height: 100%
+        padding: 100px
+
+
+    .section_padding_140
+        padding: 15px 0
+
+    .preview-image-text__image
+        width: 100%
+        object-fit: cover
+
+
+    .description-box
+        padding: 25px
+
+
+    .st-text-box
+        font-size: 16px
+        h2
+            font-size: 34px
+        br
+            display: none
+
+    .services-grid
+        flex-wrap: wrap
+        margin: -30px -10px 0
+        &__item
+            padding: 30px 10px 0
+            width: 33.33%
+
+@media screen and (max-width: 767px)
+    .form__grid
+        display: block
+
+    .form__grid-section
+        width: 100%
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+
+    .popups__popups-wrapper
+        display: block
+        overflow: auto
+
+    .popups__popup
+        margin: 50px auto
+        width: 100%
+
+    .page-header__phone
+        display: none
+
+    .page-header__top-container
+        justify-content: center
+        padding: 0 30px
+
+    .page-title
+        font-size: 32px
+
+    .main-title-box__descr
+        font-size: 16px
+        width: 100%
+        max-width: 400px
+        margin-left: 0
+        padding-left: 40px
+        &:before
+            left: 0
+
+        br
+            display: none
+
+    .preview-section
+        min-height: 350px
+
+    .infographic-grid
+        display: block
+
+    .infographic-grid__item
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+
+    .section
+        padding: 20px 0
+
+
+    .title__text
+        font-size: 28px
+
+    .grid
+        margin: -15px -5px 0
+
+    .grid__item
+        width: 50%
+        padding: 15px 5px 0
+
+
+    .full-images-grid
+        display: block
+        __item
+            width: 100%
+
+
+    .preview-image-text
+        padding: 50px 10px
+
+
+    .preview-image-text__text
+        width: 100%
+
+    .st-text-box
+        font-size: 14px
+        h2
+            font-size: 28px
+
+
+    .description-box
+        padding: 25px 10px
+        height: auto
+
+    .description-box__inner
+        padding: 10px
+
+
+    .services-grid__item
+        width: 50%
+
+    .services-item__text
+        font-size: 18px
+
+
+    .title_footer .title__text
+        font-size: 32px
+
+    .contacts-footer-grid
+        display: block
+        font-size: 20px
+        text-align: center
+        &__item
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+
+
+    .all-info-grid
+        display: block
+        text-align: center
+        &__item
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+
+
+    .description-box__price-grid
+        display: block
+
+    .description-box__price-item
+        width: 100%
+        max-width: 400px
+        margin: 0 auto 20px
+        &:last-child
+            margin-bottom: 0
+
+    .section__description-box
+        width: 100%
+
+    .section_preview
+        min-height: 100%
+        height: auto
+        padding: 50px 10px
+
+    .description-box__title_fz_35
+        font-size: 28px
+
+
+    .description-box__price-value
+        font-size: 40px
+
+    .description-box__distance
+        font-size: 20px
+
+    .section__section
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+
+
+    .gallery-grid
+        margin: -20px -5px 0
+        &__item
+            padding: 20px 5px 0
+
+
+    .contacts-box__title
+        font-size: 28px
+
+    .contacts-box__phones
+        display: block
+        text-align: center
+
+    .contacts-box__phones-item
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+
+    .description-box_contacts
+        height: auto
+
+    .contacts-box__subtitle
+        font-size: 18px
+
+    .contacts-box__address
+        display: block
+
+    .contacts-box__address-item
+        display: block
+        width: 100%
+        text-align: center
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+        br
+            display: none
+
+    .contacts-box__requisites
+        display: block
+
+    .contacts-box__requisites-text
+        margin-bottom: 15px
+
+    .preview-section__price-item
+        margin: 10px
+        width: 300px
+
+    .preview-section__prices
+        flex-wrap: wrap
+
+    .price-box__value
+        font-size: 40px
+
+    .price-box__title
+        font-size: 20px
+
+    .description-box__title
+        font-size: 28px
+
+    .table__td:last-child
+        width: 100px
+
+    .description-box__table
+        font-size: 16px
+
+    .table__tr
+        padding: 10px
+
+    .description-box__icon_mob_left
+        left: -70px
+

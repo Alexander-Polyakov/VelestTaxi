@@ -1,0 +1,180 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/preview1.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            nav.breadcrumbs
+                                a(href='#').breadcrumbs__item Главная
+                                span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box.main-title-box_v1
+                                .main-title-box__title
+                                    h1.page-title Междугороднее такси
+                                .main-title-box__descr Качественное обслуживание, <br/> новые комфортабельные автомобили <br/> бизнес класса — действительно <br/> комфортные условия поездки!
+
+                .section.section_bg_gradient-dark
+                    .container.container_width_1100
+                        .infographic-grid
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic1.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Автомобили <br/> бизнес-класса
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic2.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Мы работаем куглосуточно!
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic3.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Профессиональные водители
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic4.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Индивидуальный подход к каждому
+
+
+
+                .section.section_bg_gradient-light.section_padding_25-0-50
+                    .container.container_width_1750
+                        .section__title
+                            .title
+                                .title__icon
+                                    .lines-icon.lines-icon_w_100.lines-icon_rotate_120
+                                        i.lines-icon__line
+                                        i.lines-icon__line.lines-icon__line_bg_dark
+                                        i.lines-icon__line
+                                h2.title__text Популярные направления
+                        .section__main
+                            .grid
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+
+                                .grid__item
+                                    .st-box
+                                        .st-box__content.route-box
+                                            .route-box__header Такси Трансферт
+                                            .route-box__title Воронеж Москва
+                                            .route-box__subtitle 520км
+                                            .route-box__footer Время в пути 5 часов
+
+
+
+                .full-images-grid
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/preview1.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title Автомобили бизнес-класса
+                                .advantages-box__descr В нашем таксопарке - <br/> Toyota Camry Business Class
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/preview2.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title Бысто и с комфортом
+                                .advantages-box__descr Приятыне мелочи: питьевая вода, зонт <br/> на случай дождя и свежая пресса.
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/preview3.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title всегда Вовремя
+                                .advantages-box__descr Вам не нужно беспокоиться о пробках, <br/> мы доствим вас с точностью до минуты
+
+
+                .section.section_bg_gradient-light.section_padding_140
+                    .container.container_width_1500
+                        .preview-image-text
+                            img(src='./images/previews/preview4.jpg').preview-image-text__image
+                            .preview-image-text__text
+                                .description-box
+                                    .description-box__icon.description-box__icon_pos_top
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__icon.description-box__icon_pos_bottom
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__inner
+                                        .st-text-box
+                                            h2 Междугороднее <br/> такси в Воронеже
+                                            p Как видите, междугородное такси – удобный вариант во многих случаях, а стоимость подобных услуг вполне по карману, что и делает этот сервис в Воронеже все популярней. <br/> Наша услуга «такси межгород» востребована также и благодаря парку элитных авто, оснащенных комфортабельными сиденьями и салоном со всеми удобствами, имеющих все необходимые средства безопасности, магнитолу и медиапроигрыватель, зарядные гнезда для телефонов и гаджетов. Вам не придется скучать в дороге, ведь вы без труда найдете себе занятие по душе – чтение, прослушивание музыки, серфинг в интернете или сон. <br/> Как видите, междугородное такси – удобный вариант во многих случаях, а стоимость подобных услуг вполне по карману, что и делает этот сервис в Воронеже все популярней.
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug

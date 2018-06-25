@@ -1,0 +1,114 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+
+        .page
+
+
+
+
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/vip-taxi.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            nav.breadcrumbs
+                                a(href='#').breadcrumbs__item Главная
+                                span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box.main-title-box_v1
+                                .main-title-box__title
+                                    h1.page-title VIP такси
+                                .main-title-box__descr      Такси бизнес-класса «Taxi Camry» - одна из лучших компаний в Воронеже, в сфере  услуг “vip такси”. Уже более 5 лет мы работаем для того, чтобы наши клиенты ездили с комфортом.
+
+                .section.section_bg_gradient-dark
+                    .container.container_width_1100
+                        .infographic-grid
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic1.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Автомобили <br/> бизнес-класса
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic2.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Мы работаем куглосуточно!
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic3.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Профессиональные водители
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic4.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Индивидуальный подход к каждому
+
+
+                .section.section_bg_gradient-light.section_padding_100
+                    .container.container_width_1500
+                        .preview-image-text
+                            img(src='./images/previews/preview5.jpg').preview-image-text__image
+                            .preview-image-text__text
+                                .description-box
+                                    .description-box__icon.description-box__icon_pos_top
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__icon.description-box__icon_pos_bottom
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__inner
+                                        .st-text-box
+                                            h2 Лучшие услуги в городе
+                                            p Вы можете воспользоваться услугой вип такси в Воронеже, если ваш руководитель собирается в командировку, а вам необходимо обеспечить комфорт на высшем уровне.
+                                            p Мы организуем его передвижение по городу от момента, когда он откроет дверцу новой Toyota Camry Business Class, до момента, как он прибудет в пункт назначения. При этом, даже в случае пробок, мы доставим его вовремя.
+
+
+
+                .full-images-grid
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/preview1.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title Автомобили бизнес-класса
+                                .proportion-box__descr В нашем таксопарке - <br/> Toyota Camry Business Class
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/preview2.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title Бысто и с комфортом
+                                .proportion-box__descr Приятыне мелочи: питьевая вода, зонт <br/> на случай дождя и свежая пресса.
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/preview3.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title всегда Вовремя
+                                .proportion-box__descr Вам не нужно беспокоиться о пробках, <br/> мы доствим вас с точностью до минуты
+
+                .section.section_preview(style='background-image: url("./images/previews-full/vip-taxi2.jpg")')
+                    .container.container_width_600
+                        .title.title_mb_20
+                            .title__icon
+                                .lines-icon.lines-icon_w_100.lines-icon_rotate_120
+                                    i.lines-icon__line
+                                    i.lines-icon__line.lines-icon__line_bg_dark
+                                    i.lines-icon__line
+                            h2.title__text.title__text_fz_40 Ваш комфорт превыше всего
+                        .st-text-box.tac
+                            p Когда необходимо заказать элитное такси в Воронеже, то основным фактором, влияющим на выбор, станет комфорт. Поэтому наш подход к этой услуге отличается от подхода в других фирмах.
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug

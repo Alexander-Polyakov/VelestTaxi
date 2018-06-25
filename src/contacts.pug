@@ -1,0 +1,115 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+
+        .page
+
+
+
+
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/contacts.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            nav.breadcrumbs
+                                a(href='#').breadcrumbs__item Главная
+                                span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box
+                                h1.page-title Контакты
+
+                .section.section_contacts.section_bg_gradient-light
+                    .container.container_width_900
+                        .section__contacts-grid.contacts-page-main
+                            .contacts-page-main__section
+                                .description-box.description-box_contacts
+                                    .description-box__icon.description-box__icon_pos_top
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__icon.description-box__icon_pos_bottom
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__inner
+                                        .contacts-box
+                                            .contacts-box__header
+                                                .contacts-box__title МЫ всегда вам рады!
+                                                .contacts-box__subtitle Звоните круглосуточно!
+                                            .contacts-box__content
+                                                .contacts-box__phones
+                                                    .contacts-box__phones-item
+                                                        a(href='tel:+7 (473) 251-51-25').contact-item +7 (473) 251-51-25
+                                                    .contacts-box__phones-item
+                                                        a(href='tel:+7 (473) 251-51-25').contact-item +7 (473) 251-51-25
+                                                    .contacts-box__phones-item
+                                                        a(href='tel:+7 (473) 251-51-25').contact-item +7 (473) 251-51-25
+                                            .contacts-box__footer
+                                                | А также пишите письма:
+                                                |
+                                                a(href='mailto:zakaz@ecoled.pro').contact-item zakaz@ecoled.pro
+                            .contacts-page-main__section
+                                .description-box.description-box_contacts
+                                    .description-box__icon.description-box__icon_pos_top
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__icon.description-box__icon_pos_bottom
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__inner
+                                        .contacts-box
+                                            .contacts-box__header
+                                                .contacts-box__title Адрес компании
+                                            .contacts-box__address
+                                                .contacts-box__address-item
+                                                    img(src='./images/icons/address.svg').contacts-box__address-icon
+                                                    .contacts-box__address-text г. Воронеж, <br/> ул. Лизюкова, д. 56, <br/> офис 3
+                                                .contacts-box__address-item
+                                                    img(src='./images/icons/address.svg').contacts-box__address-icon
+                                                    .contacts-box__address-text г. Москва, <br/> Волгоградский пр-т, д. 45, <br/> стр. 1, офис 218
+                            .contacts-page-main__section
+                                .description-box.description-box_contacts
+                                    .description-box__icon.description-box__icon_pos_top
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__icon.description-box__icon_pos_bottom
+                                        .lines-icon
+                                            i.lines-icon__line
+                                            i.lines-icon__line.lines-icon__line_bg_dark
+                                            i.lines-icon__line
+                                    .description-box__inner
+                                        .contacts-box
+                                            .contacts-box__header
+                                                .contacts-box__title Реквизиты компании
+                                            .contacts-box__requisites
+                                                .contacts-box__requisites-text ИП Аксенова <br/> ИНН 3663072816 <br/> ОГРН 1083668024780
+                                                .contacts-box__requisites-button
+                                                    a(href='#').slanting-button
+                                                        .slanting-button__bg
+                                                        .slanting-button__bg-hover
+                                                        .slanting-button__text Скачать
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug

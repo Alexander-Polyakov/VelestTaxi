@@ -1,0 +1,99 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Микро автобус')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/minibus.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            nav.breadcrumbs
+                                a(href='#').breadcrumbs__item Главная
+                                span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box.main-title-box_v1
+                                .main-title-box__title
+                                    h1.page-title АРЕНДА МИКРОАВТОБУСА
+
+
+                .section.section_bg_gradient-dark
+                    .container.container_width_1100
+                        .infographic-grid
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic1.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Автомобили <br/> бизнес-класса
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic2.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Мы работаем куглосуточно!
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic3.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Профессиональные водители
+                            .infographic-grid__item.infographic-grid-item
+                                .infographic-grid-item__icon-box
+                                    img(src='./images/icons/infographic4.svg').infographic-grid-item__icon
+                                .infographic-grid-item__content Индивидуальный подход к каждому
+
+                .section.section_bg_gradient-light.section_padding_140
+                    .section__section
+                        .container.container_width_1500
+                            .preview-image-text
+                                img(src='./images/previews/minibus/preview1.jpg').preview-image-text__image
+                                .preview-image-text__text
+                                    .description-box
+                                        .description-box__icon.description-box__icon_pos_top
+                                            .lines-icon
+                                                i.lines-icon__line
+                                                i.lines-icon__line.lines-icon__line_bg_dark
+                                                i.lines-icon__line
+                                        .description-box__icon.description-box__icon_pos_bottom
+                                            .lines-icon
+                                                i.lines-icon__line
+                                                i.lines-icon__line.lines-icon__line_bg_dark
+                                                i.lines-icon__line
+                                        .description-box__inner
+                                            .st-text-box
+                                                h2 аренда микроавтобуса для междугородних поездок
+                                                p В последнее время в виду постоянно повышающихся цен на автомобильное топливо и нежелания собственников автомобилей выезжать в самостоятельные дальние поездки по причине отсутствия комфортности и возможных проблем, которые могут возникать в пути, одной из популярных услуг является предоставление на прокат междугороднего такси.
+                    .section__section
+                        .container.container_width_700
+                            .st-text-box
+                                p Предлагаемые нами на прокат микроавтобусы будут различаться не только по своей комфортабельности, но также по своей технической оснащенности. Если вам нужно встретить своих деловых партнеров, то вы можете выбрать для этой цели междугородное такси VIP-класса с комфортной и дорогой отделкой и более удобными креслами. В таких микроавтобусах будут удобно складывающиеся небольшие столики, ноутбук, DVD-проигрыватель и бар.
+                                p Заказав микроавтобус для экскурсии в Воронеже, вы получите транспортное средство, имеющее особую комплектацию в виде наушников для информации туристов, микрофона для экскурсовода. Панорамные стёкла, не покрывающиеся инеем зимой и не запотевающие летом, дают возможность хорошего обзора достопримечательностей. К разнообразным предлагаемым в этом случае дополнением можно ещё отнести телевизор или музыкальную систему, кофеварку и холодильник с разнообразными прохладительными напитками.
+
+                .full-images-grid
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/minibus/preview2.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title Бысто и с комфортом
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/minibus/preview3.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title БИЗНЕСС ПОЕЗДКИ
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/minibus/preview4.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title экскурсии и туризм
+
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='js/ymap.js')

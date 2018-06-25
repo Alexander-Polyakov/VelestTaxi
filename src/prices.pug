@@ -1,0 +1,94 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Главная')
+        include pug/styles.pug
+
+    body
+
+        .page
+
+
+
+
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/prices.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            nav.breadcrumbs
+                                a(href='#').breadcrumbs__item Главная
+                                span.breadcrumbs__item Наши тарифы
+                        .preview-section__header
+                            .main-title-box
+                                .main-title-box__title
+                                    h1.page-title Наши тарифы
+                                .main-title-box__descr Конечно, можно воспользоваться поездом, автобусом, местным аэропортом или личным автомобилем, однако это далеко не всегда удобно.
+                        .preview-section__prices
+                            .preview-section__price-item
+                                .description-box.description-box_padding_15.description-box_height_170
+                                    .description-box__inner.description-box__inner_p_0.price-box
+                                        div
+                                            .price-box__title Комфорт - класс
+                                            .price-box__value
+                                                | 12 &#8381;
+                                                span.price-box__fz35 км
+                            .preview-section__price-item
+                                .description-box.description-box_padding_15.description-box_height_170
+                                    .description-box__inner.description-box__inner_p_0.price-box
+                                        div
+                                            .price-box__title Комфорт - класс
+                                            .price-box__value
+                                                | 12 &#8381;
+                                                span.price-box__fz35 км
+                .section.section_bg_gradient-light
+                    .section__section
+                        .container.container_width_900
+                            .description-box.description-box_padding_25
+                                .description-box__title.tac  Дополнительно
+                                .description-box__icon.description-box__icon_pos_top.description-box__icon_mob_left
+                                    .lines-icon
+                                        i.lines-icon__line
+                                        i.lines-icon__line.lines-icon__line_bg_dark
+                                        i.lines-icon__line
+                                .description-box__icon.description-box__icon_pos_bottom
+                                    .lines-icon
+                                        i.lines-icon__line
+                                        i.lines-icon__line.lines-icon__line_bg_dark
+                                        i.lines-icon__line
+                                .description-box__table
+                                    .table
+                                        .table__tr
+                                            .table__td Ожидание
+                                            .table__td 500 руб. / 1 час
+                                        .table__tr
+                                            .table__td Аренда автомобиля
+                                            .table__td 800 руб. / 1 час
+                                        .table__tr
+                                            .table__td Автомобиль на свадьбу
+                                            .table__td 800 руб. / 1 час
+                                        .table__tr
+                                            .table__td Услуга “Трезвый водитель”
+                                            .table__td 1500 руб. / 1 час
+                                        .table__tr
+                                            .table__td Аренда детского кресла
+                                            .table__td 1500 руб.
+
+
+                    .section__section
+                        .container.container_width_700
+                            .st-text-box
+                                p Воронеж – один из крупных городов Центральной России, что делает его одним из экономических центров региона. Впрочем, от Воронежа далеко до российской столицы и соседних областных центров, что доставляет определенные проблемы в случае, если необходимо съездить в гости к друзьям, встретиться с деловыми партнерами или отправиться на отдых.
+                                p Конечно, можно воспользоваться поездом, автобусом, местным аэропортом или личным автомобилем, однако это далеко не всегда удобно.
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

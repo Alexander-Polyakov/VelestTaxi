@@ -1,0 +1,50 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Трансфер')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/car-park.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            nav.breadcrumbs
+                                a(href='#').breadcrumbs__item Главная
+                                span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box.main-title-box_v1
+                                .main-title-box__title
+                                    h1.page-title Наш автопарк
+                                .main-title-box__descr Лучшее такси бизнес класса в Воронеже - это, безусловно, новые автомобили, подготовленные водители и отличный сервис в дороге.
+
+
+
+                .section.section_bg_gradient-light.section_padding_100
+                    .container
+                        .gallery-grid
+                            .gallery-grid__item
+                                a(href='./images/previews/preview4.jpg'  data-fancybox='gallery').image-proportional-box.image-proportional-box_gallery
+                                    img(src='./images/previews/preview4.jpg').image-proportional-box__image
+                            .gallery-grid__item
+                                a(href='./images/previews/preview4.jpg'  data-fancybox='gallery').image-proportional-box.image-proportional-box_gallery
+                                    img(src='./images/previews/preview4.jpg').image-proportional-box__image
+                            .gallery-grid__item
+                                a(href='./images/previews/preview4.jpg'  data-fancybox='gallery').image-proportional-box.image-proportional-box_gallery
+                                    img(src='./images/previews/preview4.jpg').image-proportional-box__image
+                            .gallery-grid__item
+                                a(href='./images/previews/preview4.jpg'  data-fancybox='gallery').image-proportional-box.image-proportional-box_gallery
+                                    img(src='./images/previews/preview4.jpg').image-proportional-box__image
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+

@@ -1,0 +1,104 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+    head(lang="en")
+        include pug/metatags.pug
+        +title('Трансфер')
+        include pug/styles.pug
+
+    body
+        .page
+            include pug/components/header
+
+            main.page__main
+                .preview-section(style='background-image: url("./images/previews-full/transfer.jpg")')
+                    .container.preview-section__container
+                        .preview-section__breadcrumbs
+                            .container
+                                nav.breadcrumbs
+                                    a(href='#').breadcrumbs__item Главная
+                                    span.breadcrumbs__item Междугороднее  такси
+                        .preview-section__header
+                            .main-title-box.main-title-box_v1
+                                .main-title-box__title
+                                    h1.page-title Трансфер Воронеж
+                                .main-title-box__descr «Taxi Camry» - одна из лучших компаний в Воронеже, предлагающая услугу трансфер Воронеж.
+
+
+
+                .section.section_bg_gradient-light.section_padding_100
+                    .section__section
+                        .container.container_width_1500
+                            .preview-image-text
+                                img(src='./images/previews/transfer/preview1.jpg').preview-image-text__image
+                                .preview-image-text__text
+                                    .description-box
+                                        .description-box__icon.description-box__icon_pos_top
+                                            .lines-icon
+                                                i.lines-icon__line
+                                                i.lines-icon__line.lines-icon__line_bg_dark
+                                                i.lines-icon__line
+                                        .description-box__icon.description-box__icon_pos_bottom
+                                            .lines-icon
+                                                i.lines-icon__line
+                                                i.lines-icon__line.lines-icon__line_bg_dark
+                                                i.lines-icon__line
+                                        .description-box__inner
+                                            .st-text-box
+                                                h2 ЛУЧШИЙ ТРАНСФЕР В ГОРОДЕ Воронеже
+                                                p Трансфер Воронеж - это возможность спланировать деловые поездки, встречи, переговоры заранее. Наши автомобили бизнес-класса доставят Вас из одного города в другой, встретят в аэропорту, ж/д вокзале в назначенный час. Для тех, кто ценит время, трансферная компания «Taxi Camry» - лучший выбор.
+
+                    .section__section
+                        .container.container_width_800
+                            .title.title_mb_20
+                                .title__icon
+                                    .lines-icon.lines-icon_w_100.lines-icon_rotate_120
+                                        i.lines-icon__line
+                                        i.lines-icon__line.lines-icon__line_bg_dark
+                                        i.lines-icon__line
+                                h2.title__text.title__text_fz_40 Услуга трансфер
+                            .st-text-box
+                                p Трансфер Воронеж - это, безусловно, новые автомобили, подготовленные водители и отличный сервис в дороге. Мы уделяем время подготовке наших водителей и их развитию, поэтому можем гарантировать вам высокий уровень безопасности и комфорта всю поездку. Специально обученные водители быстро решат любые возникающие проблемы, которые вы даже не успеете заметить.
+                                p Наши автомобили приезжают на заказ без каких-либо опознавательных знаков такси, а водители соблюдают дресс-код, поэтому у вас останется ощущение, что это ваш автомобиль и ваш личный водитель. Если вы цените комфорт и вам необходимо заказать vip такси в Воронеже, то вы сделаете правильный выбор, отдав предпочтение нам.
+
+                .full-images-grid
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/transfer/preview2.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title ВОКЗАЛ
+                                .advantages-box__descr Мы отвечаем за сохранность <br/> вашего автомобиля!
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/transfer/preview3.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title АЭРОПОРТ
+                                .advantages-box__descr Круглосуточное обслуживание, <br/> высококлассные специалисты
+                    .full-images-grid__item
+                        .advantages-box
+                            img(src='./images/previews/transfer/preview4.jpg').advantages-box__image
+                            .advantages-box__content
+                                .advantages-box__title МЕЖГОРОД
+                                .advantages-box__descr Профессионализм и ответственность <br/> сотрудников "TAXICAMRY"
+
+
+                .section.section_preview(style='background-image: url("./images/previews-full/transfer2.jpg")').section_min-h_800
+                    .container.container_width_600
+                        .title.title_mb_20
+                            .title__icon
+                                .lines-icon.lines-icon_w_100.lines-icon_rotate_120
+                                    i.lines-icon__line
+                                    i.lines-icon__line.lines-icon__line_bg_dark
+                                    i.lines-icon__line
+                            h2.title__text.title__text_fz_40 Ваш комфорт превыше всего
+                        .st-text-box.tac
+                            p Когда необходимо заказать элитное такси в Воронеже, то основным фактором, влияющим на выбор, станет комфорт. Поэтому наш подход к этой услуге отличается от подхода в других фирмах.
+
+
+            include pug/components/footer
+
+
+        include pug/scripts.pug
+
