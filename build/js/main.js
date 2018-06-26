@@ -1,5 +1,25 @@
 $(document).ready(function() {
+    var headerMenuHeight = $(".js-header-menu").outerHeight(),
+        headerMenuPos = $(".js-header-menu").offset().top,
+        headerSubstrate = $(".js-header-substrate");
 
+    function headerPos(){
+        if ($(document).scrollTop() >= headerMenuPos) {
+            $(".page-header").addClass("menu-fixed");
+            headerSubstrate.css('height', headerMenuHeight);
+        } else {
+            $(".page-header").removeClass("menu-fixed");
+            headerSubstrate.css('height', 0);
+        }
+    };
+
+    if ($(window).outerWidth() > 1024) {
+        headerPos();
+
+        $(window).on('scroll', function () {
+            headerPos();
+        });
+    }
 
     $(".js-toggle-dropmenu").click(function(){
         var item = $(this).closest('.main-nav-item');

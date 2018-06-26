@@ -89,9 +89,9 @@ body
 
     ul
         list-style: none
-        text-indent: 15px
         li
             position: relative
+            padding-left: 15px
             &:before
                 content: ''
                 width: 5px
@@ -208,6 +208,13 @@ body
         position: absolute
         right: 0
         bottom: -4px
+    &.menu-fixed
+        .page-header__bottom-section
+            position: fixed
+            left: 0
+            top: 0
+            width: 100%
+
 
 .main-nav
     display: flex
@@ -442,6 +449,8 @@ body
     background-image: linear-gradient( -35deg, #a2a3a7 0%, #e1e1e1 25%, #9c9ea2 50%, #e1e1e1 75%, #a2a3a7 100%)
     box-shadow: 1.618px 1.176px 6px 0 rgba(45, 48, 52, 0.56)
     position: relative
+    display: block
+    text-decoration: none
     height: 100%
     &:before
         content: ''
@@ -697,7 +706,7 @@ body
 .page-title
     font-size: 65px
     color: #e2e2e2
-    line-height: 0.8em
+    line-height: 1.1em
     text-transform: uppercase
     text-shadow: 3px 3px 1px rgba(11, 11, 11, 0.4)
     background: linear-gradient(#fff 0%, #ccc 50%, #fff 100% )
@@ -757,12 +766,16 @@ body
 .services-item
     color: #ababab
     text-align: center
+    display: block
+    text-decoration: none
     &__icon
         height: 100px
         margin-bottom: 10px
     &__text
         font-size: 22px
         text-transform: uppercase
+    &:hover
+        color: $red
 
 
 .contacts-page-main
@@ -838,6 +851,10 @@ body
         font-size: 20px
     &_color_gray
         color: #989898
+    &.tdu
+        text-decoration: underline
+        &:hover
+            text-decoration: none
 
 .slanting-button
     min-width: 170px
@@ -1152,12 +1169,29 @@ body
             bottom: 5px
 
 
+.page-header__mobile-phone
+    display: none
+
+
 
 @media screen and (max-width: 1100px)
     .main-nav-item__link
         font-size: 18px
 
 @media screen and (max-width: 1024px)
+    .st-text-box ul li:before
+        top: 8px
+
+    .page-header__mobile-container
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        .contact-item
+            color: #fff
+            padding: 5px
+            display: inline-block
+            background-color: $gray
+
     .contact-item
         pointer-events: auto
 
@@ -1217,7 +1251,6 @@ body
 
     .page-header__hamburger
         display: block
-        text-align: right
 
     .preview-section__header
         position: static
@@ -1308,6 +1341,15 @@ body
             width: 33.33%
 
 @media screen and (max-width: 767px)
+    .st-text-box h3
+        font-size: 24px
+
+    .page-header__mobile-container
+        justify-content: space-between
+
+    .page-header__mobile-phone
+        display: block
+
     .form__grid
         display: block
 
