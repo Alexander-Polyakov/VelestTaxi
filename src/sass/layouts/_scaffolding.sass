@@ -233,7 +233,7 @@ body
         height: 30px
         width: 30px
         border: 2px solid $red
-        right: 10px
+        right: 12px
         top: 8px
         outline: none
         background-color: inherit
@@ -307,6 +307,9 @@ body
     font-size: 17px
     line-height: 1.2em
     list-style: none
+    &_one-line
+        column-count: 1
+        column-gap: 0
     &__item
         min-width: 170px
         padding: 5px 0
@@ -1052,7 +1055,7 @@ body
     height: 34px
     transform: rotate(45deg)
     cursor: pointer
-    border: 2px solid $gray
+    border: 2px solid $red
     border-radius: 50%
     background: inherit
     outline: none
@@ -1060,7 +1063,7 @@ body
         content: ''
         width: 60%
         height: 2px
-        background-color: $gray
+        background-color: $red
         position: absolute
         left: 20%
         top: 50%
@@ -1069,15 +1072,15 @@ body
         content: ''
         width: 2px
         height: 60%
-        background-color: $gray
+        background-color: $red
         position: absolute
         top: 20%
         left: 50%
         margin-left: -1px
     &:hover
-        border-color: $red
+        border-color: $gray
         &:before, &:after
-            background-color: $red
+            background-color: $gray
 
 
 .st-input
@@ -1344,10 +1347,8 @@ body
             width: 33.33%
 
 @media screen and (max-width: 767px)
-    .main-title-box__descr
-        padding: 10px
-        background: rgba(0,0,0,0.5)
-        color: #ebebeb
+    .page-header__top-section
+        padding: 10px 0
 
     .st-text-box h3
         font-size: 24px
@@ -1389,11 +1390,12 @@ body
         font-size: 16px
         width: 100%
         max-width: 400px
-        margin-left: 0
-        padding-left: 40px
+        margin-left: 40px
+        padding: 10px
+        background: rgba(0,0,0,0.5)
+        color: #ebebeb
         &:before
-            left: 0
-
+            left: -40px
         br
             display: none
 
@@ -1584,3 +1586,6 @@ body
     .description-box__icon_mob_left
         left: -70px
 
+@media screen and (max-width: 500px)
+    .main-title-box__descr
+        max-width: 260px
