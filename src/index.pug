@@ -14,7 +14,9 @@ html
             include pug/components/header
 
             main.page__main
-                .preview-section(style='background-image: url("./images/previews-full/preview1.jpg")')
+                .preview-section
+                    .preview-section__bg(style='background-image: url("./images/previews-full/preview1.jpg")')
+                    .preview-section__bg.preview-section__bg_mobile(style='background-image: url("./images/previews-full/preview1.jpg")')
                     .container.preview-section__container
                         .preview-section__breadcrumbs
                             nav.breadcrumbs
